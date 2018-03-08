@@ -1,11 +1,11 @@
-import d3 from 'd3-shape';
+import { line, curveLinearClosed } from 'd3-shape';
 
 export default function () {
-	var _lineConstructor = d3.line();
+	var _lineConstructor = line();
 	var _xAccessor = function (d) {return d.x};
 	var _yAccessor = function (d) {return d.y};
 	var _rAccessor = function (d) {return d.r};
-	var _curve = d3.curveLinearClosed;
+	var _curve = curveLinearClosed;
 
 	function _streamline(pathData) {
 

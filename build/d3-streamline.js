@@ -2,16 +2,14 @@
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'd3-shape'], factory) :
 	(factory((global.d3 = global.d3 || {}),global.d3));
-}(this, function (exports,d3) { 'use strict';
-
-	d3 = 'default' in d3 ? d3['default'] : d3;
+}(this, function (exports,d3Shape) { 'use strict';
 
 	function streamline () {
-		var _lineConstructor = d3.line();
+		var _lineConstructor = d3Shape.line();
 		var _xAccessor = function (d) {return d.x};
 		var _yAccessor = function (d) {return d.y};
 		var _rAccessor = function (d) {return d.r};
-		var _curve = d3.curveLinearClosed;
+		var _curve = d3Shape.curveLinearClosed;
 
 		function _streamline(pathData) {
 
