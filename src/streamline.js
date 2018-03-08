@@ -76,7 +76,7 @@ export default function () {
 					var lineA = {a: bothCode[l - 3], b: bothCode[l - 2]};
 					var lineB = {a: bothCode[l - 1], b: bothCode[l]};
 					var intersect = findIntersect(lineA.a.x, lineA.a.y, lineA.b.x, lineA.b.y, lineB.a.x, lineB.a.y, lineB.b.x, lineB.b.y);
-					if (intersect.found == true) {
+					if (intersect.found === true) {
 						lineA.b.x = intersect.x;
 						lineA.b.y = intersect.y;
 						lineB.a.x = intersect.x;
@@ -100,7 +100,7 @@ export default function () {
 					var lineA = {a: bothCode[l - 3], b: bothCode[l - 2]};
 					var lineB = {a: bothCode[l - 1], b: bothCode[l]};
 					var intersect = findIntersect(lineA.a.x, lineA.a.y, lineA.b.x, lineA.b.y, lineB.a.x, lineB.a.y, lineB.b.x, lineB.b.y);
-					if (intersect.found == true) {
+					if (intersect.found === true) {
 						lineA.b.x = intersect.x;
 						lineA.b.y = intersect.y;
 						lineB.a.x = intersect.x;
@@ -122,7 +122,7 @@ export default function () {
 			found: false
 		};
 		d = ((l2y2 - l2y1) * (l1x2 - l1x1)) - ((l2x2 - l2x1) * (l1y2 - l1y1));
-		if (d == 0) {
+		if (d === 0) {
 			return result;
 		}
 		a = l1y1 - l2y1;
